@@ -11,6 +11,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="section-container">
       <div className="grid lg:grid-cols-2 gap-20 items-start">
+
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -27,8 +28,8 @@ const Contact: React.FC = () => {
             open to discussing new opportunities in Data Engineering and AI.
           </p>
 
-          {/* CONTACT LINKS */}
           <div className="grid sm:grid-cols-2 gap-4">
+
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
               className="flex items-center gap-4 group p-4 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all"
@@ -64,6 +65,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </a>
+
           </div>
         </motion.div>
 
@@ -81,7 +83,6 @@ const Contact: React.FC = () => {
             </h3>
           </div>
 
-          {/* REAL FUNCTIONAL FORM */}
           <form
             className="space-y-6"
             onSubmit={(e) => {
@@ -89,19 +90,16 @@ const Contact: React.FC = () => {
 
               const form = e.currentTarget;
 
-              const name = (form.elements.namedItem("name") as HTMLInputElement)
-                ?.value;
+              const name = (form.elements.namedItem("name") as HTMLInputElement)?.value;
+              const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
+              const category = (form.elements.namedItem("category") as HTMLSelectElement)?.value;
+              const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value;
 
-              const email = (form.elements.namedItem("email") as HTMLInputElement)
-                ?.value;
-
-              const category = (
-                form.elements.namedItem("category") as HTMLSelectElement
-              )?.value;
-
-              const message = (
-                form.elements.namedItem("message") as HTMLTextAreaElement
-              )?.value;
+              // ✅ VALIDATION (IMPORTANT)
+              if (!name || !email || !message) {
+                alert("Please fill all required fields.");
+                return;
+              }
 
               const mailtoLink = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(
                 `${category} - Message from ${name}`
@@ -112,8 +110,10 @@ const Contact: React.FC = () => {
               window.location.href = mailtoLink;
             }}
           >
+
             {/* NAME + EMAIL */}
             <div className="grid md:grid-cols-2 gap-6">
+
               <input
                 name="name"
                 type="text"
@@ -129,6 +129,7 @@ const Contact: React.FC = () => {
                 className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl focus:border-brand-accent outline-none text-white transition-colors"
                 required
               />
+
             </div>
 
             {/* CATEGORY */}
@@ -163,8 +164,10 @@ const Contact: React.FC = () => {
                 className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
               />
             </button>
+
           </form>
         </motion.div>
+
       </div>
     </section>
   );
