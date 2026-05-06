@@ -2,8 +2,6 @@
  * Portfolio Data Constants
  */
 
-import profileImg from "./assets/images/regenerated_image_1777982671257.png";
-
 export const PERSONAL_INFO = {
   name: "Wajid Hussain",
   title: "Data & AI Engineer",
@@ -13,6 +11,7 @@ export const PERSONAL_INFO = {
     "I build production-grade data pipelines and AI systems that reduce manual effort, automate workflows, and deliver real-time insights.",
   bio:
     "Data Engineer with hands-on experience in real-time data processing, ETL pipeline development, and AI-powered automation in the banking sector. Skilled in Kafka, Spark, Airflow, and cloud platforms (AWS & GCP). Passionate about solving real-world data problems and building scalable, efficient, and intelligent systems.",
+
   email: "engrwajid940@gmail.com",
   phone: "+923003239940",
   whatsapp: "https://wa.me/923003239940",
@@ -21,8 +20,8 @@ export const PERSONAL_INFO = {
   upwork: "https://www.upwork.com/freelancers/~0173013fbff3f419cb",
   fiverr: "https://www.fiverr.com/sellers/wajeabro/edit",
 
-  // ✅ FIXED: correct Vite asset usage
-  profileImage: profileImg,
+  // ✅ FINAL FIX (Vercel-safe)
+  profileImage: "/images/profile.png",
 
   availability: "Available for Freelance Projects",
 };
@@ -156,10 +155,7 @@ export const FEATURED_PROJECTS = [
       "AI-powered offline chatbot answering banking policy queries directly from PDF documents.",
     tech: ["Python", "Hugging Face", "FAISS", "Tkinter", "Pandas"],
     impact: "95% reduction in compliance lookup time; 100% offline security.",
-
-    // ❌ FIXED PATHS REMINDER (use public folder OR import in components if needed)
     image: "/images/projects/chatbot.png",
-
     contributions: [
       "FAISS vector search for semantic retrieval.",
       "Flan-T5 transformer for question answering.",
@@ -219,28 +215,20 @@ export const CERTIFICATIONS = [
     title: "Oracle Cloud Infrastructure 2025 Data Science Professional",
     issuer: "Oracle",
     image: "/images/certifications/oracle.png",
-    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=91853482FBA65438064113CF0CCAA05E9AD52C8876D6C98F0F86F08F5CD8CFEC",
+    link: "...",
   },
   {
     title: "Google Cloud Professional Data Engineer",
     issuer: "Udemy",
     image: "/images/certifications/gcp.png",
-    link: "https://www.udemy.com/certificate/UC-d3bd64ec-90ab-4079-8f94-4d56920d2e58/",
+    link: "...",
   },
   {
     title: "AWS Certified Data Engineer – Associate",
     issuer: "Udemy",
     image: "/images/certifications/aws.png",
-    link: "https://www.udemy.com/certificate/UC-5b22a84b-ed57-4fa5-84af-c43cb3edf289/",
+    link: "...",
   },
-  {
-    title: "Google Machine Learning Engineer",
-    issuer: "Udemy",
-    link: "https://www.udemy.com/certificate/UC-0fac9b72-665f-420b-8ee9-c72245080eb7/",
-  },
-  { title: "Data Engineering Fundamentals", issuer: "Coursera", link: "#" },
-  { title: "Python Fundamentals", issuer: "Great Learning", link: "#" },
-  { title: "Networking & Cloud Computing", issuer: "NAVTTC", link: "#" },
 ];
 
 export const EDUCATION = [
