@@ -252,7 +252,7 @@ export const CERTIFICATIONS = [
 ];
 
 export const EDUCATION = [
-  { degree: "MS Data Science", period: "2024 – Present" },
+  { degree: "MS Data Science", period: "2024 – 2026" },
   { degree: "B.E Computer Systems Engineering", period: "2017 – 2021" },
 ];
 
