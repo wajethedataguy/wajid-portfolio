@@ -8,20 +8,47 @@ const Footer: React.FC = () => {
   return (
     <footer className="border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+
+        {/* NAME (FIXED - NO HARD CODING) */}
         <div className="flex items-center space-x-2 text-brand-accent font-mono font-bold text-lg">
           <Database size={20} />
-          <span>W.HUSSAIN</span>
+          <span>{PERSONAL_INFO.name}</span>
         </div>
 
+        {/* COPYRIGHT */}
         <div className="text-slate-500 text-sm flex items-center gap-2">
-          &copy; {currentYear} All Rights Reserved. Built with <Heart size={14} className="text-red-500 fill-red-500" /> for Data Engineering.
+          &copy; {currentYear} All Rights Reserved. Built with{" "}
+          <Heart size={14} className="text-red-500 fill-red-500" /> for Data Engineering.
         </div>
 
+        {/* SOCIAL LINKS */}
         <div className="flex items-center space-x-6 text-slate-400">
-          <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors text-sm font-medium">LinkedIn</a>
-          <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors text-sm font-medium">GitHub</a>
-          <a href="#about" className="hover:text-brand-accent transition-colors text-sm font-medium">About</a>
+          <a
+            href={PERSONAL_INFO.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand-accent transition-colors text-sm font-medium"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href={PERSONAL_INFO.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand-accent transition-colors text-sm font-medium"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="#about"
+            className="hover:text-brand-accent transition-colors text-sm font-medium"
+          >
+            About
+          </a>
         </div>
+
       </div>
     </footer>
   );

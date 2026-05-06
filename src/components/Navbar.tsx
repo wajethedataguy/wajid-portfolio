@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Database, Github, Linkedin, Mail } from "lucide-react";
+import { Menu, X, Database, Github, Linkedin } from "lucide-react";
 import { PERSONAL_INFO } from "../constants";
 
 const Navbar: React.FC = () => {
@@ -27,22 +27,25 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-brand-950/80 backdrop-blur-lg border-b border-white/10 py-4" : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? "bg-brand-950/80 backdrop-blur-lg border-b border-white/10 py-4"
+        : "bg-transparent py-6"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
+        {/* LOGO (FIXED - NO HARDCODED NAME) */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center space-x-2 text-brand-accent font-mono font-bold text-xl cursor-pointer"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <Database size={24} />
-          <span>W.HUSSAIN</span>
+          <span>{PERSONAL_INFO.name}</span>
         </motion.div>
 
-        {/* Desktop Nav */}
+        {/* DESKTOP NAV */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link, i) => (
             <motion.a
@@ -56,24 +59,24 @@ const Navbar: React.FC = () => {
               {link.name}
             </motion.a>
           ))}
+
           <div className="h-4 w-px bg-slate-800" />
+
+          {/* SOCIAL ICONS */}
           <div className="flex items-center gap-4">
             <motion.a
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
               className="text-slate-400 hover:text-white transition-colors"
             >
               <Github size={20} />
             </motion.a>
+
             <motion.a
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
               className="text-slate-400 hover:text-brand-accent transition-colors"
             >
               <Linkedin size={20} />
@@ -81,7 +84,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* MOBILE MENU BUTTON */}
         <button
           className="md:hidden text-slate-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -90,7 +93,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
