@@ -23,7 +23,7 @@ const About: React.FC = () => {
           <p className="text-slate-400 text-lg leading-relaxed mb-8">
             {PERSONAL_INFO.bio}
           </p>
-          
+
           <div className="grid sm:grid-cols-2 gap-8 mt-12">
             <div className="space-y-4">
               <h3 className="flex items-center gap-2 text-white font-bold text-lg">
@@ -39,7 +39,7 @@ const About: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="space-y-4">
               <h3 className="flex items-center gap-2 text-white font-bold text-lg">
                 <Languages className="text-brand-accent" size={20} />
@@ -52,7 +52,7 @@ const About: React.FC = () => {
                   </span>
                 ))}
               </div>
-              
+
               <h3 className="flex items-center gap-2 text-white font-bold text-lg pt-4">
                 <Brain className="text-brand-accent" size={20} />
                 Soft Skills
@@ -78,9 +78,9 @@ const About: React.FC = () => {
           {/* Profile Picture Container */}
           <div className="aspect-[4/5] md:aspect-square glass rounded-3xl overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent z-10 opacity-60" />
-            <img 
-              src={PERSONAL_INFO.profileImage} 
-              alt={PERSONAL_INFO.name} 
+            <img
+              src={PERSONAL_INFO.profileImage}
+              alt={PERSONAL_INFO.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
@@ -88,7 +88,7 @@ const About: React.FC = () => {
               }}
             />
           </div>
-          
+
           {/* Accentuating Info Card */}
           <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border border-white/10 shadow-2xl z-20">
             <div className="flex items-center gap-4">
