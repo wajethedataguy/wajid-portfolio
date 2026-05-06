@@ -69,6 +69,46 @@ const Contact: React.FC = () => {
               </div>
             </a>
 
+            {/* LINKEDIN */}
+            <a
+              href={PERSONAL_INFO.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group p-4 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                <span className="font-bold">in</span>
+              </div>
+              <div>
+                <div className="text-xs font-mono uppercase text-slate-500 tracking-widest">
+                  LinkedIn
+                </div>
+                <div className="text-white font-medium text-sm">
+                  Profile
+                </div>
+              </div>
+            </a>
+
+            {/* GITHUB */}
+            <a
+              href={PERSONAL_INFO.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group p-4 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-slate-800/40 flex items-center justify-center text-white group-hover:bg-slate-700 group-hover:text-white transition-all">
+                <span className="font-bold">GH</span>
+              </div>
+              <div>
+                <div className="text-xs font-mono uppercase text-slate-500 tracking-widest">
+                  GitHub
+                </div>
+                <div className="text-white font-medium text-sm">
+                  Code Profile
+                </div>
+              </div>
+            </a>
+
             {/* UPWORK */}
             <a
               href={PERSONAL_INFO.upwork}
