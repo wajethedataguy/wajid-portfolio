@@ -20,9 +20,7 @@ export const PERSONAL_INFO = {
   upwork: "https://www.upwork.com/freelancers/~0173013fbff3f419cb",
   fiverr: "https://www.fiverr.com/sellers/wajeabro/edit",
 
-  // ✅ FINAL FIX (Vercel-safe)
   profileImage: "/images/profile.png",
-
   availability: "Available for Freelance Projects",
 };
 
@@ -165,12 +163,10 @@ export const FEATURED_PROJECTS = [
   {
     title: "Daily KRI’s Email Pipeline",
     subtitle: "UI-Driven ETL Workflow",
-    problem:
-      "Auditors spent hours manually extracting and mailing KRI reports daily.",
+    problem: "Auditors spent hours manually extracting and mailing KRI reports daily.",
     solution:
       "Built a UI-driven automation tool that handles extraction, validation, and mailing via Outlook.",
-    description:
-      "UI-based ETL automation replacing manual audit workflows and reporting.",
+    description: "UI-based ETL automation replacing manual audit workflows and reporting.",
     tech: ["Python", "Pandas", "Tkinter", "Outlook COM API"],
     impact: "Reduced reporting time from 4 hours to 5 minutes daily.",
     image: "/images/projects/etl.png",
@@ -215,19 +211,43 @@ export const CERTIFICATIONS = [
     title: "Oracle Cloud Infrastructure 2025 Data Science Professional",
     issuer: "Oracle",
     image: "/images/certifications/oracle.png",
-    link: "...",
+    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=91853482FBA65438064113CF0CCAA05E9AD52C8876D6C98F0F86F08F5CD8CFEC",
   },
   {
     title: "Google Cloud Professional Data Engineer",
     issuer: "Udemy",
     image: "/images/certifications/gcp.png",
-    link: "...",
+    link: "https://www.udemy.com/certificate/UC-d3bd64ec-90ab-4079-8f94-4d56920d2e58/",
   },
   {
     title: "AWS Certified Data Engineer – Associate",
     issuer: "Udemy",
     image: "/images/certifications/aws.png",
-    link: "...",
+    link: "https://www.udemy.com/certificate/UC-5b22a84b-ed57-4fa5-84af-c43cb3edf289/",
+  },
+  {
+    title: "Google Machine Learning Engineer",
+    issuer: "Udemy",
+    image: "/images/certifications/ml.png",
+    link: "https://www.udemy.com/certificate/UC-0fac9b72-665f-420b-8ee9-c72245080eb7/",
+  },
+  {
+    title: "Data Engineering Fundamentals",
+    issuer: "Coursera",
+    image: "/images/certifications/data-eng.png",
+    link: "#",
+  },
+  {
+    title: "Python Fundamentals",
+    issuer: "Great Learning",
+    image: "/images/certifications/python.png",
+    link: "#",
+  },
+  {
+    title: "Networking & Cloud Computing",
+    issuer: "NAVTTC",
+    image: "/images/certifications/networking.png",
+    link: "#",
   },
 ];
 
