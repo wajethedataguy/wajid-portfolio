@@ -28,8 +28,10 @@ const Contact: React.FC = () => {
             open to discussing new opportunities in Data Engineering and AI.
           </p>
 
+          {/* CONTACT LINKS */}
           <div className="grid sm:grid-cols-2 gap-4">
 
+            {/* EMAIL */}
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
               className="flex items-center gap-4 group p-4 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all"
@@ -47,6 +49,7 @@ const Contact: React.FC = () => {
               </div>
             </a>
 
+            {/* WHATSAPP */}
             <a
               href={PERSONAL_INFO.whatsapp}
               target="_blank"
@@ -62,6 +65,46 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="text-white font-medium text-sm">
                   +92 300 3239940
+                </div>
+              </div>
+            </a>
+
+            {/* UPWORK */}
+            <a
+              href={PERSONAL_INFO.upwork}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group p-4 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                <span className="font-bold">Up</span>
+              </div>
+              <div>
+                <div className="text-xs font-mono uppercase text-slate-500 tracking-widest">
+                  Upwork
+                </div>
+                <div className="text-white font-medium text-sm">
+                  Freelance Profile
+                </div>
+              </div>
+            </a>
+
+            {/* FIVERR */}
+            <a
+              href={PERSONAL_INFO.fiverr}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group p-4 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 group-hover:bg-green-500 group-hover:text-white transition-all">
+                <span className="font-bold">fv</span>
+              </div>
+              <div>
+                <div className="text-xs font-mono uppercase text-slate-500 tracking-widest">
+                  Fiverr
+                </div>
+                <div className="text-white font-medium text-sm">
+                  Freelance Profile
                 </div>
               </div>
             </a>
@@ -95,7 +138,6 @@ const Contact: React.FC = () => {
               const category = (form.elements.namedItem("category") as HTMLSelectElement)?.value;
               const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value;
 
-              // ✅ VALIDATION (IMPORTANT)
               if (!name || !email || !message) {
                 alert("Please fill all required fields.");
                 return;
@@ -111,14 +153,13 @@ const Contact: React.FC = () => {
             }}
           >
 
-            {/* NAME + EMAIL */}
             <div className="grid md:grid-cols-2 gap-6">
 
               <input
                 name="name"
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl focus:border-brand-accent outline-none text-white transition-colors"
+                className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl text-white"
                 required
               />
 
@@ -126,16 +167,15 @@ const Contact: React.FC = () => {
                 name="email"
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl focus:border-brand-accent outline-none text-white transition-colors"
+                className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl text-white"
                 required
               />
 
             </div>
 
-            {/* CATEGORY */}
             <select
               name="category"
-              className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl focus:border-brand-accent outline-none text-white"
+              className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl text-white"
             >
               <option>Data Engineering</option>
               <option>AI / Machine Learning</option>
@@ -144,25 +184,20 @@ const Contact: React.FC = () => {
               <option>Others</option>
             </select>
 
-            {/* MESSAGE */}
             <textarea
               name="message"
               rows={4}
               placeholder="Your message..."
-              className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl focus:border-brand-accent outline-none text-white resize-none"
+              className="w-full px-5 py-4 bg-slate-950 border border-slate-800 rounded-xl text-white"
               required
             />
 
-            {/* SUBMIT BUTTON */}
             <button
               type="submit"
               className="w-full group py-5 bg-white hover:bg-brand-accent text-black font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
             >
               Send Message
-              <Send
-                size={18}
-                className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-              />
+              <Send size={18} />
             </button>
 
           </form>
